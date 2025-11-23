@@ -1,2 +1,6 @@
+venv/
+venv311/
 *.xlsx
-Dados2.xlsx
+*.csv
+.ipynb_checkpoints/
+__pycache__/
