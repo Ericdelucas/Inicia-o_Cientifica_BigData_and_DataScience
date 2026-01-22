@@ -1,0 +1,258 @@
+========================================
+FALAS DO PROJETO - TODAS AS CÉLULAS MARKDOWN
+========================================
+
+## BLOCO 1 — FUNDAMENTOS E PREPARAÇÃO DOS DADOS
+
+Antes de começar qualquer análise, eu precisei garantir que os dados estavam corretos.
+Então, nesse primeiro bloco, eu faço toda a preparação: leio o arquivo da B3, organizo as datas, normalizo os preços e filtro apenas ações do mercado à vista.
+
+Depois disso, estruturo os dados em matrizes de preço e volume, que facilitam todas as análises seguintes.
+Esse bloco é basicamente a base de tudo — se ele estiver errado, todo o resto fica comprometido.
+
+---
+
+## BLOCO 2 — ANÁLISE EXPLORATÓRIA INICIAL
+
+Fala sugerida (olhando para o gráfico):
+
+Depois de preparar os dados, o próximo passo foi olhar para eles sem nenhum modelo complexo.
+Aqui, eu faço uma análise exploratória inicial, começando pela volatilidade e pelo preço médio dos ativos, e depois focando em um ativo específico, a PETR4.
+
+(pausa curta, aponta para o gráfico)
+
+Esse gráfico que vocês estão vendo é a série temporal do preço da PETR4 ao longo do período analisado, de janeiro até o fim de junho de 2024.
+No eixo horizontal temos o tempo, ou seja, as datas de negociação, e no eixo vertical o preço da ação em reais.
+
+(agora vem a parte mais importante — interpretação)
+
+A primeira coisa que dá para notar é que o preço não segue uma linha reta.
+Ele apresenta movimentos de alta e de queda relativamente frequentes, o que já indica a presença de volatilidade no ativo.
+
+(aponta mentalmente para os picos)
+
+Observamos períodos em que o preço se aproxima da faixa dos 42 a 43 reais, seguidos por quedas mais acentuadas, chegando próximo dos 35 reais em alguns momentos.
+Isso mostra que a PETR4 passou por ciclos claros de valorização e correção ao longo do período.
+
+(agora conecta com o conceito acadêmico)
+
+Essa observação visual é importante porque, antes de aplicar qualquer modelo estatístico ou de machine learning, é fundamental entender como o dado se comporta na prática.
+Aqui eu não estou tentando prever nada ainda, apenas identificar padrões gerais, tendências e níveis de instabilidade do preço.
+
+(fecha o raciocínio do bloco)
+
+Esse tipo de análise exploratória serve como base para todas as etapas seguintes do trabalho, como benchmark com o mercado, cálculo de risco, indicadores técnicos e modelos de regressão.
+
+---
+
+## BLOCO 3 — DINÂMICA DE MERCADO E BENCHMARK
+
+Depois de entender o comportamento isolado da PETR4, o próximo passo foi comparar esse ativo com o mercado como um todo.
+Para isso, eu uso o IBOVESPA como benchmark, que representa o desempenho médio das principais ações brasileiras.
+
+(aponta para as duas linhas do gráfico)
+
+Nesse gráfico, a linha azul representa a PETR4 e a linha laranja representa o IBOVESPA.
+Ambas começam na mesma base, que é o valor 100, justamente para permitir uma comparação direta de desempenho ao longo do tempo.
+
+(explica o conceito central)
+
+Quando a linha da PETR4 está acima da linha do IBOV, significa que a ação está performando melhor que o mercado.
+Quando está abaixo, ela está tendo um desempenho inferior ao índice.
+
+(interpretação visual rápida)
+
+Ao longo do período analisado, é possível observar momentos em que a PETR4 supera claramente o IBOV, mas também períodos em que ela apresenta quedas mais acentuadas do que o mercado.
+Isso indica que a PETR4 tem um comportamento mais volátil, amplificando tanto ganhos quanto perdas em relação ao índice.
+
+(fecha o bloco)
+
+Esse tipo de comparação é fundamental para avaliar se um ativo realmente agrega valor em relação ao mercado ou se apenas acompanha o movimento geral.
+
+---
+
+## BLOCO 4 — INDICADORES TÉCNICOS (RSI)
+
+"Depois de entender o comportamento geral do preço e comparar o ativo com o mercado, eu passo para uma análise mais específica do movimento do preço usando indicadores técnicos."
+
+RSI — Índice de Força Relativa (gráfico de cima)
+
+"Esse primeiro gráfico mostra o RSI, que é um indicador de momentum.
+Ele mede a força do movimento do preço ao longo do tempo, variando de 0 a 100."
+
+"Essas duas linhas tracejadas são referências importantes:
+A linha vermelha em 70 indica regiões de sobrecompra, onde o preço pode estar esticado para cima.
+A linha verde em 30 indica regiões de sobrevenda, onde o preço pode estar excessivamente pressionado para baixo."
+
+"O que a gente observa aqui é que o preço da PETR4 oscila bastante entre essas faixas.
+Sempre que o RSI se aproxima de 70, o movimento de alta começa a perder força.
+E quando se aproxima de 30, surgem momentos em que o preço tende a reagir."
+
+"Ou seja, o RSI não prevê o futuro, mas ajuda a identificar possíveis excessos do mercado."
+
+---
+
+## BLOCO 4 — INDICADORES TÉCNICOS (BANDAS DE BOLLINGER)
+
+_________________________________________________________________________________________________________________________________
+
+📈 Bandas de Bollinger (gráfico de baixo)
+
+"Já nesse segundo gráfico, eu utilizo as Bandas de Bollinger, que ajudam a entender a volatilidade do preço."
+
+📈 O que observar no gráfico (apontando com o dedo)
+
+"Quando o preço (linha azul) se aproxima da banda superior, isso indica que ele está relativamente alto em relação à sua média."
+
+"Quando o preço se aproxima da banda inferior, ele está relativamente baixo em relação ao comportamento recente."
+
+"Perceba também que, em alguns períodos, a distância entre a banda superior e a inferior aumenta.
+Isso indica maior volatilidade, ou seja, o mercado está mais agitado."
+
+"Em outros momentos, esse canal fica mais estreito, indicando um período de menor volatilidade, com o preço oscilando menos."
+
+⚠️ Parte importante (sem prometer milagre)
+
+"Essas bandas não dizem que o preço vai subir ou cair, mas ajudam a identificar regiões de excesso."
+
+"Elas mostram quando o preço está se afastando muito do padrão médio, o que pode indicar maior risco naquele momento."
+
+🎯 Mensagem certa para a banca
+
+"O uso das Bandas de Bollinger aqui serve para analisar volatilidade e comportamento do preço, não para prever o mercado."
+
+"Elas complementam a análise estatística e ajudam a visualizar períodos de estresse e calmaria do ativo."
+
+---
+
+## BLOCO 5 — MÉTRICAS DE RISCO E RETORNO
+
+"Até aqui, eu mostrei como o preço se comporta ao longo do tempo e usei alguns indicadores para entender momentos de força e fraqueza do ativo."
+
+"Agora, eu passo para uma etapa mais numérica, onde eu tento responder a seguinte pergunta:
+👉 quanto esse ativo rende e quão arriscado ele é?"
+
+"Para fazer isso, eu não analiso mais o preço diretamente, mas sim as variações de preço de um dia para o outro, que chamamos de retornos diários."
+
+"Esses retornos mostram, por exemplo, se o ativo subiu 1%, caiu 2% ou ficou estável em cada dia."
+
+📊 Conectando com o que o código faz (sem jargão)
+
+"A partir desses retornos, eu calculo três coisas:"
+
+"O retorno médio anual, que indica quanto o ativo tende a render ao longo de um ano."
+
+"A volatilidade, que mede o quanto esse retorno varia — em outras palavras, o nível de risco."
+
+"E o Sharpe Ratio, que junta essas duas informações para mostrar se o retorno compensa o risco."
+
+### Dados na tabela
+
+Esses ativos aparecem com valores nulos porque não possuem histórico suficiente de negociação no período analisado.
+Como as métricas de risco dependem de variações consistentes ao longo do tempo, o modelo corretamente evita gerar resultados estatísticos inválidos.
+
+---
+
+## BLOCO 6 — CLUSTERING COM K-MEANS
+
+"Depois de analisar risco e retorno individualmente, eu avancei para uma abordagem um pouco diferente."
+
+"Aqui, ao invés de olhar cada ativo isoladamente, eu tentei entender quais ativos se comportam de forma parecida ao longo do tempo."
+
+### O QUE É O CLUSTERING (SEM JARGÃO)
+
+"Para isso, eu usei uma técnica de aprendizado de máquina chamada K-Means."
+
+"O objetivo não é prever preços, mas agrupar ativos com padrões semelhantes de retorno diário."
+
+"Ou seja, ativos que sobem e descem de maneira parecida tendem a cair no mesmo grupo."
+
+### O QUE O CÓDIGO FAZ (EM LINGUAGEM HUMANA)
+
+"Primeiro, eu garanti que os dados estivessem completos, preenchendo eventuais lacunas de preço."
+
+"Depois, transformei os preços em retornos diários e selecionei apenas ativos com um histórico mínimo de observações, para evitar distorções."
+
+"Cada ativo passa a ser representado por uma sequência de retornos ao longo do tempo."
+
+📊 APONTANDO PARA O RESULTADO NA TELA
+
+"Aqui, o algoritmo agrupou 2.047 ativos em 5 clusters."
+
+"O que chama atenção é que a grande maioria dos ativos ficou concentrada em um único cluster, enquanto alguns poucos ficaram isolados em clusters menores."
+
+### 🎯 CONCLUSÃO FORTE (ESSA É A CHAVE)
+
+"Esse resultado é bastante comum em dados financeiros, porque muitos ativos tendem a se mover junto com o mercado, enquanto poucos têm comportamentos realmente distintos."
+
+"Do ponto de vista prático, isso ajuda a identificar:
+- ativos redundantes,
+- ativos com comportamento atípico,
+- e potenciais candidatos para diversificação de carteira."
+
+---
+
+## BLOCO 7 — REGRESSÃO LINEAR (TENDÊNCIA)
+
+Depois de analisar o comportamento do preço, os indicadores técnicos e os padrões entre os ativos, eu incluí uma abordagem mais simples de modelagem estatística."
+
+"Aqui, eu utilizo regressão linear, não como previsão de mercado, mas como uma forma de identificar a tendência geral do preço ao longo do tempo."
+
+"É importante deixar claro que isso não é um modelo preditivo de mercado."
+
+"A regressão linear serve apenas para responder a uma pergunta básica:
+👉 no longo prazo, o preço apresenta uma tendência de alta, de queda ou é estável?"
+
+No gráfico, a linha azul representa o preço real da ação PETR4 ao longo do tempo."
+
+"Já a linha tracejada representa a linha de regressão linear, que resume todo esse movimento em uma tendência média."
+
+#### grafico
+
+Mesmo com várias oscilações de curto prazo, a regressão ajuda a visualizar o direcionamento geral do preço."
+
+"Neste caso, a inclinação da linha sugere uma leve tendência de queda ao longo do período analisado, apesar das recuperações intermediárias."
+
+###### 🎯 CONEXÃO COM O RESTO DO TRABALHO
+
+"Enquanto os indicadores técnicos analisam movimentos de curto prazo, a regressão linear oferece uma visão macroscópica, ajudando a entender o cenário geral."
+
+"Isso é especialmente útil em um contexto acadêmico, para mostrar como diferentes ferramentas respondem a perguntas diferentes sobre os mesmos dados."
+
+---
+
+## BLOCO 8 — SÉRIES TEMPORAIS
+
+Depois de analisar o preço pontualmente, os indicadores técnicos e a tendência geral, eu passo agora para uma abordagem de séries temporais."
+
+"Aqui, a ideia não é prever o futuro, mas entender como o passado influencia o comportamento do preço ao longo do tempo."
+
+Nesse gráfico, a linha azul representa o preço diário da PETR4."
+
+"As outras duas linhas são médias móveis, que são ferramentas clássicas em análise de séries temporais."
+
+"A média móvel de 20 dias representa o comportamento de curto prazo."
+
+"Já a média móvel de 50 dias representa uma visão mais suavizada e de longo prazo do preço."
+
+"Essas médias funcionam como filtros: elas reduzem o 'ruído' diário do mercado e ajudam a visualizar tendências."
+
+Quando o preço fica acima das médias, isso indica um momento de força."
+
+"Quando ele fica abaixo, sugere um período de fraqueza relativa."
+
+"Os cruzamentos entre essas médias também ajudam a identificar mudanças de tendência, mas sempre de forma indicativa, não determinística."
+
+---
+
+## BLOCO FINAL — SÍNTESE DE INVESTIMENTO
+
+"Para finalizar o trabalho, eu junto tudo o que foi analisado até aqui em uma única síntese."
+
+"Ao longo do projeto, eu observei o comportamento do preço, comparei o ativo com o mercado, analisei indicadores técnicos, risco, retorno, padrões de mercado e tendências."
+
+"Neste último bloco, a ideia não é prever o futuro, mas responder uma pergunta mais realista e importante:"
+
+========================================
+FIM DO ARQUIVO DE FALAS
+========================================
